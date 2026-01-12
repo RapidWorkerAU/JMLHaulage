@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JML Hotshots | WA-Owned Hotshot Freight</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="logo-img" src="images/white-logo.png" alt="JML Hotshots logo" />
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav">
+      <a href="#about">Why JML</a>
+      <a href="#services">Services</a>
+      <a href="#estimate">Estimate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="cta-button" href="tel:0407538562">Call 24/7</a>
+  </header>
+
+  <div class="nav-overlay" id="site-nav" aria-hidden="true">
+    <button class="nav-close" type="button" aria-label="Close navigation">
+      Close
+    </button>
+    <nav class="nav-overlay-links">
+      <a href="#about">Why JML</a>
+      <a href="#services">Services</a>
+      <a href="#estimate">Estimate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">West Australian owned and operated</p>
+        <h1>Hotshot freight that keeps WA mining and industry moving.</h1>
+        <p class="lede">
+          Fast, reliable, and compliant hotshot deliveries across Western Australia. We specialise in urgent parts
+          and time-critical freight for mines, shutdowns, and remote sites.
+        </p>
+        <div class="hero-actions">
+          <a class="cta-button" href="#estimate">Get a quick estimate</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <div class="feature-grid">
+        <article class="feature-item">
+          <span class="feature-top">24/7</span>
+          <p>Dispatch</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-top">WA</span>
+          <p>Owned</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-top">100%</span>
+          <p>Direct runs</p>
+        </article>
+        <article class="feature-item">
+          <span class="feature-top">Fast</span>
+          <p>Mobilisation</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-header about-header">
+        <div class="about-title">
+          <p class="eyebrow">Why JML Hotshots</p>
+          <h2>Built for the pace and pressure of WA operations.</h2>
+          <p>
+            We are a locally owned hotshot team built by people who have worked in WA mining and supported teams across
+            the top three operators. We understand the cost of downtime and the urgency of critical parts. Our
+            leadership background in Workplace Health &amp; Safety and Industrial Emergency Services means safety,
+            Chain of Responsibility, and compliance are embedded in every run.
+          </p>
+        </div>
+        <div class="about-icon">
+          <img class="section-icon" src="images/truck-icon.png" alt="Truck icon" />
+        </div>
+      </div>
+      <div class="pillar-grid">
+        <article class="pillar-card">
+          <h3>Reliability</h3>
+          <p>Clear comms, constant updates, and on-time delivery for mission-critical parts.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>Speed</h3>
+          <p>Rapid mobilisation with dedicated vehicles that run direct to site.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>Compliance</h3>
+          <p>Fatigue management, load restraint, and site-ready documentation handled upfront.</p>
+        </article>
+        <article class="pillar-card">
+          <h3>Safety &amp; CoR</h3>
+          <p>WHS-led leadership with Chain of Responsibility embedded in every run.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <div class="section-header">
+        <p class="eyebrow">Services</p>
+        <h2>Hotshot freight for urgent and high-value loads.</h2>
+        <p>
+          We respect existing logistics contracts and work alongside them when scale providers cannot respond quickly
+          or are forced into oversized transport. JML bridges the gap with right-sized vehicles that are faster, more
+          agile, and cost-effective for critical freight.
+        </p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <h3>Breakdown Parts</h3>
+          <p>Critical spares, tooling, and components delivered fast to reduce downtime.</p>
+        </article>
+        <article class="service-card">
+          <h3>Shutdown Support</h3>
+          <p>Planned and reactive runs aligned to shutdown windows and site access.</p>
+        </article>
+        <article class="service-card">
+          <h3>Remote Site Runs</h3>
+          <p>Pilbara, Goldfields, Mid West, and WA industrial hubs.</p>
+        </article>
+        <article class="service-card">
+          <h3>After Hours</h3>
+          <p>Night and weekend pickups with live updates and proof of delivery.</p>
+        </article>
+        <article class="service-card">
+          <h3>Right-Sized Transport</h3>
+          <p>Smaller loads delivered without paying for overkill trucks or delays.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="estimate" class="estimate">
+      <div class="estimate-grid">
+        <div class="estimate-copy">
+          <p class="eyebrow">Freight estimate</p>
+          <h2>Plan your run in minutes.</h2>
+          <p>
+            Enter your pickup and delivery locations. The map section is ready for an API connection that will
+            calculate distance automatically and provide a minimum cost estimate.
+          </p>
+        </div>
+        <div class="estimate-panel">
+          <div class="estimate-panel-card" id="estimateCard">
+            <div class="estimate-panel-face estimate-panel-front">
+              <img class="estimate-logo" src="images/logo.png" alt="JML Hotshots logo" />
+              <h3 class="estimate-panel-heading">Freight estimate calculator</h3>
+              <p class="estimate-panel-help">Enter a suburb, street address, or site name to plan your run.</p>
+              <form class="estimate-form" data-rate="3.40">
+                <div class="form-row">
+                  <label for="pickup">Pickup location</label>
+                  <input id="pickup" name="pickup" type="text" placeholder="Suburb or mine site" />
+                  <p class="form-help">Start typing a suburb, mine site, or depot.</p>
+                </div>
+                <div class="form-row">
+                  <label for="delivery">Delivery location</label>
+                  <input id="delivery" name="delivery" type="text" placeholder="Destination site" />
+                  <p class="form-help">Add the destination site or suburb.</p>
+                </div>
+                <div class="form-row is-hidden" id="distanceRow">
+                  <label for="distanceKm">Distance (km)</label>
+                  <input id="distanceKm" name="distanceKm" type="number" min="0" step="0.1" placeholder="Auto-calculated" readonly />
+                  <p class="form-help">Auto-calculated from the route.</p>
+                </div>
+                <div class="form-row">
+                  <label for="estimateEmail">Email address</label>
+                  <input id="estimateEmail" name="estimateEmail" type="email" placeholder="you@company.com" autocomplete="email" />
+                  <p class="form-help">Required to view pricing. We will email your estimate.</p>
+                </div>
+                <div class="estimate-actions">
+                  <button class="cta-button" type="button" id="calcBtn">Calculate estimate</button>
+                </div>
+                <p class="estimate-alert" id="estimateAlert" aria-live="polite"></p>
+                <details class="estimate-disclaimer" open>
+                  <summary>Disclaimer</summary>
+                  <p>Rates are indicative. Final pricing depends on load size, timing, and site access. Estimates also depend on driver availability and safety requirements, including maximum daily driving hours for single drivers and the need for additional drivers on urgent deliveries.</p>
+                </details>
+              </form>
+            </div>
+            <div class="estimate-panel-face estimate-panel-back" id="estimateResult">
+              <strong class="estimate-heading">Your estimate</strong>
+              <div class="estimate-summary">
+                <p><span>From</span><span id="summaryFrom">-</span></p>
+                <p><span>To</span><span id="summaryTo">-</span></p>
+                <p><span>Distance</span><span id="summaryDistance">-</span></p>
+                <p><span>Time</span><span id="summaryTime">-</span></p>
+              </div>
+              <div class="estimate-total">
+                <span>Minimum estimate</span>
+                <strong id="minEstimate">$0.00</strong>
+              </div>
+              <div class="estimate-result-actions">
+                <button class="secondary-button" type="button" id="restartBtn">Restart calculator</button>
+              <a class="secondary-link" href="tel:0407538562">Call for a formal quote</a>
+              </div>
+              <p class="estimate-note">Rates are indicative. Final pricing depends on load size, timing, and site access. Estimates also depend on driver availability and safety requirements, including maximum daily driving hours for single drivers and the need for additional drivers on urgent deliveries.</p>
+            </div>
+          </div>
+        </div>
+        <div class="estimate-media">
+          <div id="map" class="map-canvas" aria-label="Google map of Perth, WA"></div>
+          <div class="estimate-features">
+            <article class="estimate-feature">
+              <span>Mining proven</span>
+              <p>Built by teams with WA mine site experience.</p>
+            </article>
+            <article class="estimate-feature">
+              <span>Cost smart</span>
+              <p>Avoid overkill transport and premium pricing.</p>
+            </article>
+            <article class="estimate-feature">
+              <span>Fast &amp; agile</span>
+              <p>Smaller fleet, quicker mobilisation.</p>
+            </article>
+            <article class="estimate-feature">
+              <span>Safety led</span>
+              <p>WHS and emergency services foundation.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-card">
+        <img class="logo-img dark-logo" src="images/white-logo.png" alt="JML Hotshots logo" />
+        <div>
+          <h2>Need a hotshot now?</h2>
+          <p>Dispatch is available 24/7 for urgent freight across Western Australia.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="cta-button cta-dark" href="tel:0407538562">Call 24/7 dispatch</a>
+          <a class="secondary-link light-link" href="mailto:jarrad@jmlegg.com.au">jarrad@jmlegg.com.au</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-meta">
+        <img class="footer-logo" src="images/logo.png" alt="JML Hotshots logo" />
+        <p>Perth, WA</p>
+      </div>
+      <div class="footer-legal">
+        <p>© 2025 JML Hotshots. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./pricing-config.js"></script>
+  <script src="./hotshots-calculator.js"></script>
+  <script>
+    const updateEstimateCardHeight = () => {
+      const card = document.querySelector("#estimateCard");
+      const front = document.querySelector(".estimate-panel-front");
+      const back = document.querySelector(".estimate-panel-back");
+      if (!card || !front || !back) return;
+      const height = Math.max(front.scrollHeight, back.scrollHeight);
+      card.style.minHeight = `${height}px`;
+    };
+
+    updateEstimateCardHeight();
+
+    const disclaimer = document.querySelector(".estimate-disclaimer");
+    if (disclaimer) {
+      disclaimer.addEventListener("toggle", updateEstimateCardHeight);
+    }
+
+    window.addEventListener("resize", updateEstimateCardHeight);
+  </script>
+  <script>
+    const header = document.querySelector(".site-header");
+    const navToggle = document.querySelector(".nav-toggle");
+    const overlay = document.querySelector("#site-nav");
+    const navClose = document.querySelector(".nav-close");
+    const overlayLinks = document.querySelectorAll(".nav-overlay-links a");
+
+    const setNavOpen = (isOpen) => {
+      if (!header || !navToggle || !overlay) return;
+      header.classList.toggle("nav-open", isOpen);
+      overlay.classList.toggle("is-open", isOpen);
+      overlay.setAttribute("aria-hidden", String(!isOpen));
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+    };
+
+    if (header && navToggle && overlay) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = !header.classList.contains("nav-open");
+        setNavOpen(isOpen);
+      });
+    }
+
+    if (navClose) {
+      navClose.addEventListener("click", () => setNavOpen(false));
+    }
+
+    overlayLinks.forEach((link) => {
+      link.addEventListener("click", () => setNavOpen(false));
+    });
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUZPRTAaZhRw_ictu5gfBF0EXv95gfg-k&callback=initMap&libraries=places"
+    async
+    defer>
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
