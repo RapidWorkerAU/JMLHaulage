@@ -91,7 +91,7 @@ exports.handler = async (event) => {
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(errorText);
+      throw new Error(`Resend error ${response.status}: ${errorText}`);
     }
   };
 
@@ -104,10 +104,11 @@ exports.handler = async (event) => {
       body: "OK"
     };
   } catch (error) {
+    console.error("Estimate email failure:", error);
     return {
       statusCode: 500,
       headers: { "Access-Control-Allow-Origin": "*" },
-      body: "Email send failed"
+      body: `Email send failed: ${error.message}`
     };
   }
 };
