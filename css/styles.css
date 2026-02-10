@@ -906,6 +906,54 @@ input:focus {
   color: var(--muted);
 }
 
+.legal-page {
+  padding: 6rem 5vw 3rem;
+}
+
+.legal-page .section-header {
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.legal-content {
+  max-width: 900px;
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.legal-content h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.05rem;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.legal-content p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.legal-body .site-header {
+  color: var(--ink);
+}
+
+.legal-body .nav a {
+  color: var(--ink);
+}
+
+.legal-body .nav a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--orange);
+}
+
+.legal-body .nav-toggle span {
+  background: var(--ink);
+}
+
 @media (max-width: 960px) {
   .site-header {
     position: static;

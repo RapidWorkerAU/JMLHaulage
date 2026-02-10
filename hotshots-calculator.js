@@ -225,6 +225,14 @@
           }
 
           try {
+            const isFilePreview = window.location && window.location.protocol === "file:";
+            if (isFilePreview) {
+              showResult();
+              showDistanceRow();
+              setAlert("Email sending is disabled when opened from a file. Serve the site over http(s) to email the estimate.");
+              return;
+            }
+
             const response = await fetch("/.netlify/functions/send-estimate", {
               method: "POST",
               headers: { "Content-Type": "application/json" },
@@ -245,8 +253,9 @@
             showResult();
             showDistanceRow();
           } catch (error) {
+            showResult();
+            showDistanceRow();
             setAlert("We could not email the estimate. Please try again or call for a formal quote.");
-            hideResult();
           } finally {
             setLoading(false);
           }
