@@ -52,7 +52,7 @@
   };
 
   const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
-  const EMAIL_PROMPT = "Check your email (and spam folder)";
+  const EMAIL_PROMPT = "Check your email for your custom price estimate - ensure you check your spam folders if not received in 5 minutes.";
 
   let map;
   let directionsService;
