@@ -20,7 +20,7 @@
       delivery: document.querySelector("#delivery"),
       email: document.querySelector("#estimateEmail"),
       distanceKm: document.querySelector("#distanceKm"),
-      minEstimate: document.querySelector("#minEstimate"),
+      estimateStatus: document.querySelector("#estimateStatus, #minEstimate"),
       calcBtn: document.querySelector("#calcBtn"),
       restartBtn: document.querySelector("#restartBtn"),
       distanceRow: document.querySelector("#distanceRow"),
@@ -52,6 +52,7 @@
   };
 
   const isValidEmail = (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  const EMAIL_PROMPT = "Check your email (and spam folder)";
 
   let map;
   let directionsService;
@@ -115,7 +116,7 @@
       if (els.summaryTo) els.summaryTo.textContent = "-";
       if (els.summaryDistance) els.summaryDistance.textContent = "-";
       if (els.summaryTime) els.summaryTime.textContent = "-";
-      if (els.minEstimate) els.minEstimate.textContent = "$0.00";
+      if (els.estimateStatus) els.estimateStatus.textContent = EMAIL_PROMPT;
     };
 
     const hideDistanceRow = () => {
@@ -157,11 +158,11 @@
       }
 
       if (!email) {
-        setAlert("Please enter your email to view pricing.");
+        setAlert("Please enter your email to receive your estimate.");
         return;
       }
 
-      if (!isValidEmail(email)) {
+      if ((els.email && !els.email.checkValidity()) || !isValidEmail(email)) {
         setAlert("Please enter a valid email address.");
         return;
       }
@@ -220,8 +221,8 @@
           const minimumEstimate = Math.min(kmCost, hourCost);
           const estimateLabel = formatCurrency(minimumEstimate);
 
-          if (els.minEstimate) {
-            els.minEstimate.textContent = estimateLabel;
+          if (els.estimateStatus) {
+            els.estimateStatus.textContent = EMAIL_PROMPT;
           }
 
           try {

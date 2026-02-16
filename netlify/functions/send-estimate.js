@@ -44,9 +44,9 @@ exports.handler = async (event) => {
 
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.ESTIMATE_FROM;
-  const notifyTo = process.env.ESTIMATE_NOTIFY_TO;
+  const notifyTo = process.env.ESTIMATE_NOTIFY_TO || "jarrad@jmlegg.com.au";
 
-  if (!apiKey || !from || !notifyTo) {
+  if (!apiKey || !from) {
     return { statusCode: 500, body: "Missing email configuration" };
   }
 

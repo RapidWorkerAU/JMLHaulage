@@ -178,8 +178,8 @@
                 </div>
                 <div class="form-row">
                   <label for="estimateEmail">Email address</label>
-                  <input id="estimateEmail" name="estimateEmail" type="email" placeholder="you@company.com" autocomplete="email" />
-                  <p class="form-help">Required to view pricing. We will email your estimate.</p>
+                  <input id="estimateEmail" name="estimateEmail" type="email" placeholder="you@company.com" autocomplete="email" required />
+                  <p class="form-help">Required to receive your estimate by email.</p>
                 </div>
                 <div class="estimate-actions">
                   <button class="cta-button" type="button" id="calcBtn">Calculate estimate</button>
@@ -200,8 +200,8 @@
                 <p><span>Time</span><span id="summaryTime">-</span></p>
               </div>
               <div class="estimate-total">
-                <span>Minimum estimate</span>
-                <strong id="minEstimate">$0.00</strong>
+                <span>Estimate status</span>
+                <strong id="estimateStatus">Check your email (and spam folder)</strong>
               </div>
               <div class="estimate-result-actions">
                 <button class="secondary-button" type="button" id="restartBtn">Restart calculator</button>
@@ -267,7 +267,7 @@
   </footer>
 
   <script src="./pricing-config.js"></script>
-  <script src="./hotshots-calculator.js"></script>
+  <script src="./hotshots-calculator.js?v=20260216-2"></script>
   <script>
     const updateEstimateCardHeight = () => {
       const card = document.querySelector("#estimateCard");
